@@ -11,20 +11,24 @@ import java.util.*;
 public class sortUtility 
 {
 	static Scanner sc=new Scanner(System.in);
-	public static int[] bubbleSort(int[] arr) {
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = 0; j < arr.length - i - 1; j++) {
-				if (arr[j] > arr[j + 1]) {
-					int temp = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = temp;
+	public static int[] bubbleSort(int[] a) 
+	{
+		for (int i = 0; i < a.length - 1; i++) {
+			for (int j = 0; j < a.length - i - 1; j++) 
+			{
+				if (a[j] > a[j + 1]) 
+				{
+					int temp = a[j];
+					a[j] = a[j + 1];
+					a[j + 1] = temp;
 				}
 			}
 		}
-		return arr;
+		return a;
 	}
 
-	public static String[] insertionSort(String[] arr) {
+	public static String[] insertionSort(String[] arr) 
+	{
 		int n = arr.length;
 		String key;
 
