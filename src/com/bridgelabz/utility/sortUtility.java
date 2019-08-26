@@ -11,6 +11,23 @@ import java.util.*;
 public class sortUtility 
 {
 	static Scanner sc=new Scanner(System.in);
+	
+	  public static int[] selectionSort(int[] arr)
+	  {  
+	        for (int i = 0; i < arr.length - 1; i++)  
+	        {  
+	            int index = i;  
+	            for (int j = i + 1; j < arr.length; j++){  
+	                if (arr[j] < arr[index]){  
+	                    index = j;//searching for lowest index  
+	                }  
+	            }  
+	            int smallerNumber = arr[index];   
+	            arr[index] = arr[i];  
+	            arr[i] = smallerNumber;  
+	        } 
+	       return arr;
+	    }  
 	public static int[] bubbleSort(int[] a) 
 	{
 		for (int i = 0; i < a.length - 1; i++) {
@@ -125,11 +142,10 @@ public class sortUtility
 		}
 	}
 
-	/**
-	 * Purpose: Count frequency of words
-	 * 
-	 * @param strArr
-	 */
+ 
+	/*
+	 * count the frequencies of word */
+	 
 	public static void frequencyCount(String[] strArr) {
 		mergeSort(strArr, 0, strArr.length - 1);
 		System.out.println("Sorted Array using Merge sort");
@@ -138,12 +154,16 @@ public class sortUtility
 
 		int count = 1, j = 0;
 
-		for (int i = 0; i < strArr.length - 2; i++) {
+		for (int i = 0; i < strArr.length - 2; i++) 
+		{
 			j++;
-			if (strArr[i].equals(strArr[i + 1])) {
+			if (strArr[i].equals(strArr[i + 1])) 
+			{
 				count++;
 
-			} else {
+			} 
+			else 
+			{
 				System.out.print("Key: " + strArr[i] + " Value: " + count + " ");
 				System.out.println();
 				count = 1;
