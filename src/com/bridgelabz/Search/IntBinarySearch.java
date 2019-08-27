@@ -1,8 +1,12 @@
 package com.bridgelabz.Search;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 import com.bridgelabz.utility.SearchUtility;
-import java .util.*;
 
 public class IntBinarySearch 
-{ 
+{
+	 
 
 }
