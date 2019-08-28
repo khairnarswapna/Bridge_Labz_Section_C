@@ -7,6 +7,30 @@ public class ArrUtility
 {
 		
     static Scanner sc=new Scanner(System.in);
+    
+    
+    public static int findDistinctTriplets(int b[],int length)//method 1
+	{
+		System.out.println();
+		int i,j,k,count=0;
+		for(i=0;i<length;i++)
+		{
+			for(j=i+1;j<length;j++)
+			{
+				for(k=j+1;k<length;k++)
+				{
+					// printing distinct triples (i, j, k) where a[i] + a[j] + a[k] = 0
+					if (b[i] + b[j] + b[k] == 0)
+					{
+						System.out.println(b[i] + " " + b[j] + " " + b[k]);
+						count++;
+					}
+				}
+			}
+		}
+		// return number of distinct triplets (i, j, k) such that a[i] + a[j] + a[k] = 0
+		return count;
+	}
 	/***
 	 * function for 2D array
 	 */
@@ -88,6 +112,65 @@ public class ArrUtility
 		 
 		
 	}
+	public static boolean isPrime(int num) 
+	{
+		if (num == 0 || num == 1)
+			return false;//
+		else {
+			for (int i = 2; i < num / 2; i++) 
+			{
+				if (num % i == 0) 
+				{
+					return false;//
+				}
+			}
+		}
+
+		return true;
+	}
+	
+	public static boolean isAnagram(int no1, int no2) 
+	{
+		 String str1, str2;
+		 
+		str1 = String.valueOf(no1);
+		str2 = String.valueOf(no2);
+		int str1len=str1.length();
+		int str2len=str2.length();
+		char[] char1 = new char[str1len];
+		char[] char2 = new char[str2len];
+		
+		if (str1.length() != str2.length()) 
+		{
+			return false;
+		} 
+		else 
+		{
+			 
+			for (int i = 0; i < char1.length; i++) 
+			{
+				char1[i] = str1.charAt(i);
+			}
+			for (int i = 0; i < char2.length; i++) 
+			{
+				char2[i] = str2.charAt(i);
+			}
+			Arrays.sort(char1); /*sorting of both array*/
+			Arrays.sort(char2);
+
+			if (Arrays.equals(char1, char2)) 
+			{
+				return true;
+			} 
+			else 
+			{
+
+				return false;
+			}
+		}
+
+	}
+	
 	
 
 }
