@@ -1,4 +1,6 @@
 package com.bridgelabz.ArraysPgm;
+
+import com.bridgelabz.utility.ArrUtility;
 import java.util.*;
 
 public class Calender2 
@@ -8,7 +10,8 @@ public class Calender2
 		static int[][] calender = new int[5][7];
 		static int[] month = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-		static void initCal() {
+		static void initCal() 
+		{
 			for (int i = 0; i < calender.length; i++) {
 				for (int j = 0; j < calender[i].length; j++) {
 					calender[i][j] = -10;
@@ -16,12 +19,16 @@ public class Calender2
 			}
 		}
 
-		static void display(int m) {
-			System.out.println("   Sun	Mon	Tue	Wed	Thu	Fri	Sat");
+		static void display(int m) 
+		{
+			System.out.println("     Sun	Mon	Tue	Wed	Thu	Fri	Sat");
 
-			for (int i = 0; i < calender.length; i++) {
-				for (int j = 0; j < calender[i].length; j++) {
-					if (calender[i][j] < 0 || calender[i][j] > month[m - 1]) {
+			for (int i = 0; i < calender.length; i++) 
+			{
+				for (int j = 0; j < calender[i].length; j++) 
+				{
+					if (calender[i][j] < 0 || calender[i][j] > month[m - 1]) 
+					{
 						System.out.print("\t ");
 					} else if (calender[i][j] > 0) {
 						System.out.print("\t" + calender[i][j] + " ");
@@ -31,9 +38,11 @@ public class Calender2
 			}
 		}
 
-		static void putCalender(int d) {
+		static void putCalender(int d) 
+		{
 			int d1 = 1;
-			for (int i = d; i < calender[0].length; i++) {
+			for (int i = d; i < calender[0].length; i++) 
+			{
 				// System.out.print(d1);
 				calender[0][i] = d1++;
 			}
@@ -45,31 +54,26 @@ public class Calender2
 
 		}
 
-		static void dispCalender(int m, int y) {
-			int d = dayOfWeek(m, y);
+		static void dispCalender(int D,int M, int Y) 
+		{
+			int d =ArrUtility.calDayOfWeek(D,M, Y);
 			initCal();
 			putCalender(d);
-			display(m);
+			display(M);
 
 		}
 
-		static int dayOfWeek(int m, int y) {
-			int d = 1;
-			int y0 = y - (14 - m) / 12;
-			int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
-			int m0 = m + 12 * ((14 - m) / 12) - 2;
-			int d0 = (d + x + (31 * m0) / 12) % 7;
-			return d0;
-		}
-
+		 
 		public static void main(String[] args)
 		{
 			Scanner s = new Scanner(System.in);
+			System.out.println("enter Day");
+			int d = s.nextInt();
 			System.out.println("enter month");
 			int m = s.nextInt();
-			System.out.println("enter yaer");
-			int y = s.nextInt();
-			dispCalender(m, y);
+			System.out.println("Enter year");
+			int y=s.nextInt();
+			dispCalender(d,m,y);
 		}
 	
 }

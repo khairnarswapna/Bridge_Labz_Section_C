@@ -5,13 +5,13 @@
  */
 package com.bridgelabz.ArraysPgm;
 import com.bridgelabz.utility.ArrUtility;
-import java.util.*;
+ import java.util.*;
 public class SumOfThree 
 {
 	static Scanner sc=new Scanner(System.in);
 	public static void main(String[] args)
 	{
-	 
+	  
 		System.out.print("Enter Size of Array :");
 		int size=sc.nextInt();
 		int arr[]=new int [size]; 
@@ -26,6 +26,7 @@ public class SumOfThree
 		int sum=ArrUtility.findDistinctTriplets(arr,size);//pass the arguments to method 1
 		System.out.println("No.of Tripltes :"+sum);
 		System.out.println();
+		 
 	}
 
 }

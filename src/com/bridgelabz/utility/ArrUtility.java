@@ -170,7 +170,19 @@ public class ArrUtility
 		}
 
 	}
+
+	/*function for caldayofweek*/
 	
+	public static int calDayOfWeek(int day, int month, int yr) 	
+	{
+		int y1, x, m, d1;
+		y1 = yr - (14 - month) / 12;
+		x = y1 + (y1 / 4) - (y1 / 100) + (y1 / 400);
+		m = month + 12 * ((14 - month) / 12) - 2;
+		d1 = (day + x + 31 * m / 12) % 7;
+		return d1;
+}
+
 	
 
 }

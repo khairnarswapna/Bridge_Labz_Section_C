@@ -24,10 +24,10 @@ public class SearchUtility
 			int uservalue = sc.nextInt();
 			if (uservalue == 1) 
 			{
-
+ 
 				hi = mi;
 				mi = (li + hi) / 2;
-
+ 
 			} else if (uservalue == 2) 
 			{
 				li = mi+1;
@@ -37,9 +37,9 @@ public class SearchUtility
 				System.out.println("please enter the valid input");
 			}
 		}
-
 		System.out.println("Your number is :" + mi);
 		sc.close();
+		
 
 	}
 	public static int integerBinarySearch(int[] arr, int key) 
