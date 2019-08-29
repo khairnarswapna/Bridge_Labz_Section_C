@@ -11,6 +11,7 @@ public class PowerOfTwo
 			int number;
 			Scanner sc = new Scanner(System.in);
 			PowerOfTwo pw=new PowerOfTwo();
+		 
 
 			do
 			{
@@ -34,8 +35,11 @@ public class PowerOfTwo
 	        System.out.println("Printing all till Power Value "+number);
 				for(int i=0;i<number;i++){
 					System.out.println("2 ^ "+i+" = "+Math.pow(2,i));		
-				}
+			}
+			
+				
 			}	
+		    
 	
 
 

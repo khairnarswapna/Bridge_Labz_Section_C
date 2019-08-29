@@ -181,7 +181,65 @@ public class ArrUtility
 		m = month + 12 * ((14 - month) / 12) - 2;
 		d1 = (day + x + 31 * m / 12) % 7;
 		return d1;
-}
+	}
+
+	public static double harmonicSeries(int num) 
+	{
+		double sum = 1;
+		if (num == 1) {
+			return 1.0;
+		} else {
+			for (int i = 2; i <= num; i++) {
+				sum = sum + ((double) 1 / i);
+			}
+			return sum;
+		}
+
+	}
+	
+	public static int RepeatedInArray(int[] a) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i + 1; j < a.length; j++) {
+				if (a[i] == a[j]) {
+					return a[i];
+				}
+			}
+		}
+		return 0;
+	}
+	
+	
+	public void gamlingSimulation(int stake, int goal, int day) 
+	{
+		int tmpstake = stake, win = 0,loss = 0;
+		for (int i = 0; i < day; i++) 
+		{
+			while (tmpstake > 0 && tmpstake < goal) 
+			{
+				if (Math.random() < 0.5) 
+				{
+					tmpstake++;
+					win++;
+				} else 
+				{
+					tmpstake--;
+					loss++;// lose
+				}
+				if (tmpstake == goal) 
+				{
+					win++;
+				}
+			}
+		}
+
+		int a[][] = new int[2][1];
+		a[0][0] = win;
+		a[1][0] = loss;
+
+		System.out.println("the number of times the game won is " + a[0][0]);
+		System.out.println("The number of times the game loss is " + a[1][0]);
+
+	}
 
 	
 

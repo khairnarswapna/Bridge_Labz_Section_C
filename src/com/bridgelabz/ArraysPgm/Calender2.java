@@ -74,6 +74,9 @@ public class Calender2
 			System.out.println("Enter year");
 			int y=s.nextInt();
 			dispCalender(d,m,y);
+			s.close();
+			
 		}
+		 
 	
 }

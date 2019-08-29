@@ -1,28 +1,28 @@
 package com.bridgelabz.ArraysPgm;
+import com.bridgelabz.utility.ArrUtility;
 
 public class RepeatedNumber 
 {
 
-    void printRepeating(int arr[],int size) 
-    {
-        int i, j;
-        System.out.println("Repeated Elements are in array:");
-        for (i = 0; i < size; i++) 
-        {
-            for (j = i + 1; j < size; j++) 
-            {
-                if (arr[i] == arr[j]) 
-                    System.out.print(arr[i] + " " );
-            }
-        } 
-    }
-  
-    public static void main(String[] args) 
-    {
-    	RepeatedNumber repeat = new RepeatedNumber();
-        int arr[] = {4, 2, 4, 5, 2, 3, 1,5};
-        int arr_size = arr.length; 
-        repeat.printRepeating(arr, arr_size);
-    }
+	public static void main(String[] args) 
+	{
+		int a[] = new int[100];
+	
+		for (int i = 0; i < 99; i++) {
+			a[i] = i + 1;
+		}
+		a[99] = (int) (Math.random() * 99 + 1);
+		 
+		for (int i = 0; i < a.length; i++)  /*for printing array*/
+		{
+			System.out.print(a[i] + " ");
+		}
+		System.out.println();
+		 
+		int repeatedNum = ArrUtility.RepeatedInArray(a);/*finding repeated array*/
+		int[][] repeated = new int[1][1];
+		repeated[0][0] = repeatedNum;
+		System.out.println("Repeated Number is : " + repeated[0][0]);
 
+	}
 }

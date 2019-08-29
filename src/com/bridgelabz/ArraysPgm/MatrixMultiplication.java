@@ -42,13 +42,16 @@ public class MatrixMultiplication
 	       
 	  
 	       System.out.println("Matrix 1:");
+	       System.out.println();
 	       for(i=0;i<r1;i++)
 	       {
+	    	   System.out.print("|");
 	    	   for(j=0;j<c1;j++)
 	    	   {
 	    		   System.out.print(A[i][j]+" ");
 	    		   
 	    	   }
+	    	   System.out.print("|");
 	    	   System.out.println();
 	    	   
 	       }
@@ -72,11 +75,13 @@ public class MatrixMultiplication
 	      System.out.println("Matrix 2:");
 	       for(i=0;i<r2;i++)
 	       {
+	    	   System.out.print("|");
 	    	   for(j=0;j<c2;j++)
 	    	   {
 	    		   System.out.print(B[i][j]+" ");
 	    		   
 	    	   }
+	    	   System.out.print("|");
 	    	   System.out.println();
 	    	   
 	       }
@@ -99,13 +104,16 @@ public class MatrixMultiplication
 		       }
 		       
 		       System.out.println("Multiplication of matrix");
+		     
 		       for(i=0;i<r1;i++)
 		       {
+		    	   System.out.print("|");
 		    	   for(j=0;j<c2;j++)
 		    	   {
 		    		   System.out.print(res[i][j]+" ");
 		    		   
 		    	   }
+		    	   System.out.print("|");
 		    	   System.out.println();
 		       }
 		
