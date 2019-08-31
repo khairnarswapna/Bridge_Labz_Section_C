@@ -131,8 +131,8 @@ public class ArrUtility
 	
 	public static boolean isAnagram(int no1, int no2) 
 	{
-		 String str1, str2;
-		 
+		
+		String str1, str2;
 		str1 = String.valueOf(no1);
 		str2 = String.valueOf(no2);
 		int str1len=str1.length();
@@ -197,6 +197,35 @@ public class ArrUtility
 
 	}
 	
+	/*
+	 * function for Integer Pallindrome Number
+	 */
+	public static boolean isPalindrome(int num1) 
+	{
+		int sum = 0;
+		int r;
+		int temp = num1;
+		if (num1 <= 10) 
+		{
+			return false;
+		} 
+		else 
+		{
+			while (num1 > 0) 
+			{
+				r = num1 % 10;
+				sum = (sum * 10) + r;
+				num1 = num1 / 10;
+			}
+			if (temp == sum)
+				return true;
+			else
+				return false;
+
+		}
+
+	}
+	
 	public static int RepeatedInArray(int[] a) {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = i + 1; j < a.length; j++) {
@@ -206,6 +235,35 @@ public class ArrUtility
 			}
 		}
 		return 0;
+	}
+	
+	public static String[] shuffleCardsDeck(String[] arr) {
+		Random random = new Random();
+		int f1, f2;
+		String temp;
+		for (int i = 0; i < 52; i++) 
+		{
+			f1 = random.nextInt(51);
+			f2 = random.nextInt(51);
+			if (f1 != f2) {
+				temp = arr[f1];
+				arr[f1] = arr[f2];
+				arr[f2] = temp;
+			}
+		}
+		return arr;
+
+	}
+	public static int randomNumber(int range) 
+	{
+		Random random = new Random();
+		return (int) random.nextInt(range) + 1;// 1 to 6
+	}
+	
+	public static int rollDice() 
+	{
+		Random random = new Random();
+		return (int) random.nextInt(6) + 1;// 1 to 6
 	}
 	
 	

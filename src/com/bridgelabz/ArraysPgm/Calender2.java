@@ -30,7 +30,9 @@ public class Calender2
 					if (calender[i][j] < 0 || calender[i][j] > month[m - 1]) 
 					{
 						System.out.print("\t ");
-					} else if (calender[i][j] > 0) {
+						
+					} else if (calender[i][j] > 0) 
+					{
 						System.out.print("\t" + calender[i][j] + " ");
 					}
 				}

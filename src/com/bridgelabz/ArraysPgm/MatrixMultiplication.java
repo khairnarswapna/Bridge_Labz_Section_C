@@ -3,10 +3,11 @@ import java.util.*;
 
 public class MatrixMultiplication 
 {
+	public static  Scanner in= new Scanner(System.in);
 	public static void main(String args[])
 	   {
 	      int r1, r2,c1,c2,i,j,k;
-	      Scanner in= new Scanner(System.in);
+	      
 	 
 	      System.out.println("Enter the number of rows of matrix1");
 	      r1 = in.nextInt();

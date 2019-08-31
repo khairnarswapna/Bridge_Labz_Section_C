@@ -4,12 +4,12 @@ import java.util.*;
 public class PowerOfTwo 
 { 
 
-	    
+		 static Scanner sc = new Scanner(System.in);
 		 public static void main(String args[])
 	     { 
 			
 			int number;
-			Scanner sc = new Scanner(System.in);
+		 
 			PowerOfTwo pw=new PowerOfTwo();
 		 
 
