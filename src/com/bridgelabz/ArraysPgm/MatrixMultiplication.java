@@ -18,7 +18,7 @@ public class MatrixMultiplication
 	     
 	      System.out.println("Enter the number  of columns of matrix 2");
 	      c2 = in.nextInt();
-	  
+	 
 	      if(c1==r2)
 	     {
 	 
@@ -123,7 +123,9 @@ public class MatrixMultiplication
 	else
 		
 	System.out.print("multipication does not exist ");
+	      
 	   }
+
   
 
 }

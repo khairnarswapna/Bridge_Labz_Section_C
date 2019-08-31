@@ -18,6 +18,7 @@ public class MsgRegex
 		StrRegexUtility.Message(FullName, Mob_no);
 		 
 
+		sc.close();
 	}
 
 }

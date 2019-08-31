@@ -9,8 +9,8 @@ public class PoemLyricsRegex
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("****please select choice*****");
-		System.out.println("1. Chicks ­ chick\n"+ "2. Duck ­ quack\n"+ "3. Turkey ­ gobble\n"+ "4. Pig ­ oink, oink\n"+ "5. Cow ­ moo, moo\n"
-				+ "6. Cat ­meow, meow\n"+ "7. Mule ­ Heehaw\n"+ "8. Dog ­ bow wow\n" + "9. Turtle ­ nerp, nerp\n");
+		System.out.println("1. Chicks - chick\n"+ "2. Duck - quack\n"+ "3. Turkey - gobble\n"+ "4. Pig - oink, oink\n"+ "5. Cow -moo, moo\n"
+				+ "6. Cat- meow, meow\n"+ "7. Mule- Heehaw\n"+ "8. Dog -bow wow\n" + "9. Turtle - nerp, nerp\n");
 	 
 		int userchoice=sc.nextInt();
 		switch (userchoice) 

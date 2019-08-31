@@ -48,7 +48,7 @@ public class DeterminatofMat2D
 		M1[1][1] = M[2][2];
 		
 		for (int i = 0; i < M1.length; i++) 
-		{
+		 {
 			System.out.print("|");
 			for (int j = 0; j < M1[i].length; j++) 
 			{
@@ -56,7 +56,7 @@ public class DeterminatofMat2D
 			}
 			System.out.print("|");
 			System.out.println();
-		}
+		} 
 		int detOfM2 = M1[0][0] * M1[1][1] - M1[1][0] * M1[0][1];
 		System.out.println();
 		M1[0][0] = M[1][0];
